@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm patient's appointment?"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_popupConfirm_profile"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_title" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_displayText_fullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Full Name"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_popupConfirm_profile" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_value_fullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_fullName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_displayText_fullName" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_displayText_vaccineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Vaccine Name"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_fullName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_value_fullName" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_value_vaccineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_fullName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_displayText_vaccineName" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_displayText_batchNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Batch Number"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_fullName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_value_vaccineName" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_value_batchNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_fullName"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_displayText_batchNo" />
+
+    <!--Right side textViews    -->
+    <TextView
+        android:id="@+id/textView_popupConfirm_displayText_ICPassport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="IC/Passport"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_popupConfirm_profile" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_value_ICPassport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_ICPassport"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_displayText_ICPassport" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_displayText_manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Manufacturer"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_ICPassport"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_value_ICPassport" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_value_manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_ICPassport"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_displayText_manufacturer" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_displayText_expiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Expiry Date"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_ICPassport"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_value_manufacturer" />
+
+    <TextView
+        android:id="@+id/textView_popupConfirm_value_expiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading..."
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/textView_popupConfirm_displayText_ICPassport"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_displayText_expiryDate" />
+
+    <EditText
+        android:id="@+id/editText_popupConfirm_remarks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="Remarks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_popupConfirm_value_batchNo"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_popupConfirm_remarks">
+
+        <Button
+            android:id="@+id/button_popupConfirm_reject"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/reject"
+            android:text="Reject" />
+
+        <Button
+            android:id="@+id/button_popupConfirm_confirm"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Confirm" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

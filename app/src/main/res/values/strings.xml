@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyVax</string>
+    <style name="itemTitleStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="subItemStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--    <style name="buttonStyle">-->
+    <!--        <item name="android:textSize">18sp</item>-->
+    <!--        <item name="android:textAllCaps">false</item>-->
+    <!--    </style>-->
+</resources>

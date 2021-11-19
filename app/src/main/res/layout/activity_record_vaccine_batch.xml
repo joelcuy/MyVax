@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button_add_vaccine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/addsign"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="Add vaccine type"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner_vaccine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/text_view_vaccine_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Please select a vaccine."
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/edit_text_batch_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter batch number"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_text_expiry_date"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter expiry date by date picker"
+            android:inputType="date"
+            android:enabled="false"/>
+
+        <ImageButton
+            android:id="@+id/image_button_add_batch_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/calendar_2_icon" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_text_quantity_of_doses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter quantity of doses available"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_record_batch_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Submit" />
+
+</LinearLayout>

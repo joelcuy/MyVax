@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text_add_vaccine_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter vaccine ID"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_add_vaccine_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter vaccine name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_add_vaccine_manufacturer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter vaccine manufacturer"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_add_vaccine_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Add Vaccine" />
+
+
+
+</LinearLayout>

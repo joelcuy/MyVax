@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BatchDetailsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_batchDetails_displayText_expiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Expiry Date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_displayText_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pending"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_value_expiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="15/12/2021"
+                app:layout_constraintStart_toStartOf="@+id/textView_batchDetails_displayText_expiryDate"
+                app:layout_constraintTop_toBottomOf="@+id/textView_batchDetails_displayText_expiryDate" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_value_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="12"
+                app:layout_constraintStart_toStartOf="@+id/textView_batchDetails_displayText_pending"
+                app:layout_constraintTop_toBottomOf="@+id/textView_batchDetails_displayText_pending" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_displayText_availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnWeight="2"
+                android:layout_marginTop="32dp"
+                android:text="Availability"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textView_batchDetails_displayText_expiryDate"
+                app:layout_constraintTop_toBottomOf="@+id/textView_batchDetails_value_expiryDate" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_displayText_administered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="32dp"
+                android:text="Administered"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textView_batchDetails_displayText_pending"
+                app:layout_constraintTop_toBottomOf="@+id/textView_batchDetails_value_pending" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_value_availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnWeight="2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="32"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_batchDetails_displayText_expiryDate"
+                app:layout_constraintTop_toBottomOf="@+id/textView_batchDetails_displayText_availability" />
+
+            <TextView
+                android:id="@+id/textView_batchDetails_value_administered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="16dp"
+                android:text="54"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_batchDetails_displayText_pending"
+                app:layout_constraintTop_toBottomOf="@+id/textView_batchDetails_displayText_administered" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView_batchDetails_displayText_vaccinationAppointment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Vaccination Appointments"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button_batchDetails_manageVaccinationAppointment"
+        app:layout_constraintEnd_toStartOf="@+id/button_batchDetails_manageVaccinationAppointment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_batchDetails_manageVaccinationAppointment" />
+
+    <Button
+        android:id="@+id/button_batchDetails_manageVaccinationAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Manage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <ListView
+        android:id="@+id/listView_batchDetails_vaccinationAppointmentList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_batchDetails_manageVaccinationAppointment"
+        tools:listitem="@layout/activity_custom_vaccination_list_view_adapter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

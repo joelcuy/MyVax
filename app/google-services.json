@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298895964114",
+    "project_id": "myvax-81b64",
+    "storage_bucket": "myvax-81b64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298895964114:android:d65eb2be0d03c977a3fa0b",
+        "android_client_info": {
+          "package_name": "com.example.myvax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298895964114-dv9kq5josbncrq6j08msfm5jj009s501.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkyMwL3f3reVf1GqSLzywlzvSISm1qgpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298895964114-dv9kq5josbncrq6j08msfm5jj009s501.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

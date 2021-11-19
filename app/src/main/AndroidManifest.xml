@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myvax">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyVax">
+        <activity
+            android:name=".RecordVaccineBatch"
+            android:exported="true"
+            android:label="Record Vaccine Batch"/>
+        <activity
+            android:name=".PatientSignUp"
+            android:exported="true"
+            android:label="Patient Sign Up"/>
+        <activity
+            android:name=".HomeSignUp"
+            android:exported="true"
+            android:label="MyVax"/>
+        <activity
+            android:name=".AdminSignUp"
+            android:exported="true"
+            android:label="Admin Sign Up"/>
+        <activity
+            android:name=".AdminDashboard"
+            android:exported="true"
+            android:label="Dashboard"/>
+        <activity
+            android:name=".AddVaccineType"
+            android:exported="true"
+            android:label="Add Vaccine Type"/>
+        <activity
+            android:name=".BatchDetailsActivity"
+            android:exported="true"
+            android:label="Batch Details"/>
+        <activity
+            android:name=".ViewBatchInfoActivity"
+            android:exported="true"
+            android:label="View Vaccine Batch Info"/>
+        <activity
+            android:name=".MyAppointment"
+            android:exported="true"
+            android:label="My Appointment"/>
+        <activity
+            android:name=".AppointmentSuccess"
+            android:exported="true"
+            android:label="Booking Successful" />
+        <activity
+            android:name=".RequestAppointment"
+            android:exported="true"
+            android:label="Request an Appointment" />
+        <activity
+            android:name=".BatchList"
+            android:exported="true"
+            android:label="List of Batches" />
+        <activity
+            android:name=".HealthcareCentreList"
+            android:exported="true"
+            android:label="List of Healthcare Centres" />
+        <activity
+            android:name=".AvailableVaccines"
+            android:exported="true"
+            android:label="List of Available Vaccines" />
+        <activity
+            android:name=".PatientDashboard"
+            android:exported="true"
+            android:label="Dashboard"/>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

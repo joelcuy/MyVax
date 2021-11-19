@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_centre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_existing_centre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Existing Centre" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_new_centre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Centre" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_centre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/edit_text_centre_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter centre name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_centre_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter centre address"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_admin_signup_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter username"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_admin_signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edit_text_admin_signup_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter full name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_text_admin_signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter email address"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edit_text_admin_signup_staffID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter staffID"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_admin_signup_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Submit" />
+
+</LinearLayout>
+
