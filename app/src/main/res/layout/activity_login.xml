@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="15dp"
     android:orientation="vertical"
-    android:id="@+id/linear_layout_login"
     tools:context=".LoginActivity">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/logo" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="180dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
         android:scaleType="fitCenter"
-        android:layout_marginTop="10dp"
         android:src="@drawable/doctors2" />
 
     <EditText
         android:id="@+id/edit_text_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:hint="Enter email"
-        android:inputType="text"
-        android:layout_marginTop="10dp"/>
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/edit_text_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:hint="Enter password"
-        android:inputType="textPassword"
-        android:layout_marginTop="10dp"/>
+        android:inputType="textPassword" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,16 +47,16 @@
             android:id="@+id/checkbox_show_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show Password"
-            android:onClick="showPasswordClick"/>
+            android:onClick="showPasswordClick"
+            android:text="Show Password" />
 
         <CheckBox
             android:id="@+id/checkbox_remember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember Me"
             android:layout_marginLeft="110dp"
-            android:onClick="rememberClick"/>
+            android:onClick="rememberClick"
+            android:text="Remember Me" />
 
     </LinearLayout>
 
@@ -65,36 +65,72 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:text="Login" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_horizontal">
-
-    <TextView
-        android:id="@+id/text_view_new_here"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="New here? "
-        android:layout_weight="1"
-        android:textAlignment="textEnd"
-        android:textSize="16sp" />
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/text_view_signup_now"
+        <TextView
+            android:id="@+id/text_view_new_here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="New here? "
+            android:textAlignment="textEnd"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_view_signup_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="Sign up now"
+            android:textColor="@color/teal_main"
+
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Sign up now"
-        android:textColor="@color/teal_main"
-        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        android:textSize="16sp" />
-</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="or"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:alpha="0.5"
+            android:background="@color/black" />
+    </LinearLayout>
+
+
+    <com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
+        android:id="@+id/huawei_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
 
 
 </LinearLayout>
