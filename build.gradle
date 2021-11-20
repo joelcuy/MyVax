@@ -1,10 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        google()
-        mavenCentral()
         // Configure the Maven repository address for the HMS Core SDK.
         maven {url 'https://developer.huawei.com/repo/'}
+        google()
+        mavenCentral()
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.3"
