@@ -22,7 +22,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 
-//Activity to view all batch
+//Activity to view all batches
 public class ViewBatchInfoActivity extends AppCompatActivity {
     //View components
     ListView listViewBatchClass;

@@ -3,7 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_add_vaccine_type.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.28020833333333334" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_admin_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_appointment_success.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_available_vaccines.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_batch_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_batch_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_custom_batch_list_view_adapter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_custom_vaccination_list_view_adapter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_healthcare_centre_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_home_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_my_appointment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_patient_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_patient_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_record_vaccine_batch.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_request_appointment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/activity_view_batch_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/popup_administer_vaccine.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/gjoel/AndroidStudioProjects/Java/MyVax/app/src/main/res/layout/popup_confirm_vaccine.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
