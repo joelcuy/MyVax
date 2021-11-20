@@ -2,9 +2,9 @@
 buildscript {
     repositories {
         // Configure the Maven repository address for the HMS Core SDK.
-        maven {url 'https://developer.huawei.com/repo/'}
         google()
         mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
 
     }
     dependencies {
@@ -14,7 +14,7 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         // Add the AppGallery Connect plugin configuration. You are advised to use the latest plugin version.
-        classpath 'com.huawei.agconnect:agcp:1.6.0.300'
+        classpath 'com.huawei.agconnect:agcp:1.5.2.300'
     }
 }
 

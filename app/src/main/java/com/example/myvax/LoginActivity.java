@@ -1,6 +1,7 @@
 package com.example.myvax;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -28,6 +30,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.huawei.hms.common.ApiException;
+import com.huawei.hms.support.account.AccountAuthManager;
+import com.huawei.hms.support.account.request.AccountAuthParams;
+import com.huawei.hms.support.account.request.AccountAuthParamsHelper;
+import com.huawei.hms.support.account.result.AuthAccount;
+import com.huawei.hms.support.account.service.AccountAuthService;
+import com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -43,6 +52,12 @@ public class LoginActivity extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
 
+    //Huawei Login
+    public static final String TAG = "HuaweiIdActivity";
+    private AccountAuthService mAuthManager;
+    private AccountAuthParams mAuthParam;
+    HuaweiIdAuthButton huaweiLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         checkBoxShowPassword = findViewById(R.id.checkbox_show_password);
         checkBoxRemember = findViewById(R.id.checkbox_remember);
         textViewSignUpNow = findViewById(R.id.text_view_signup_now);
+        huaweiLogin = findViewById(R.id.btn_huawei_login);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +122,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, HomeSignUp.class));
+            }
+        });
+
+        huaweiLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                huaweiSignIn();
             }
         });
 
@@ -167,4 +190,34 @@ public class LoginActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
+
+
+    //Huawei Login
+    private void huaweiSignIn() {
+        mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setIdToken()
+//                .setAccessToken()
+                .createParams();
+        mAuthManager = AccountAuthManager.getService(LoginActivity.this, mAuthParam);
+        startActivityForResult(mAuthManager.getSignInIntent(), 8888);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        // Process the authorization result and obtain an ID to**AuthAccount**thAccount.
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 8888) {
+            com.huawei.hmf.tasks.Task<AuthAccount> authAccountTask = AccountAuthManager.parseAuthResultFromIntent(data);
+            if (authAccountTask.isSuccessful()) {
+                // The sign-in is successful, and the user's ID information and ID token are obtained.
+                AuthAccount authAccount = authAccountTask.getResult();
+                Log.i(TAG, "idToken:" + authAccount.getIdToken());
+            } else {
+                // The sign-in failed. No processing is required. Logs are recorded for fault locating.
+                Log.e(TAG, "sign in failed : " +((ApiException) authAccountTask.getException()).getStatusCode());
+            }
+        }
+    }
+
+
 }

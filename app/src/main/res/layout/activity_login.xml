@@ -127,7 +127,7 @@
 
 
     <com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
-        android:id="@+id/huawei_login"
+        android:id="@+id/btn_huawei_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal" />

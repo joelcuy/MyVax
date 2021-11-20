@@ -65,4 +65,8 @@ dependencies {
     implementation files('libs/additionnal.jar')
     implementation files('libs/mail.jar')
     implementation 'com.huawei.hms:hwid:6.1.0.303'
+    implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
 }
+
+// Add the information to the bottom of the file.
+apply plugin: 'com.huawei.agconnect'
