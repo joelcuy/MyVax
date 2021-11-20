@@ -1,5 +1,6 @@
 package com.example.myvax.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ import com.example.myvax.Classes.User;
 import com.example.myvax.Classes.Vaccination;
 import com.example.myvax.Classes.Vaccine;
 import com.example.myvax.R;
+import com.example.myvax.emailConfig.SendMailTask;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,6 +33,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 //This class is basically extending the original adapter to customize the list view into the way we want
 public class CustomVaccinationListViewAdapter extends ArrayAdapter<Vaccination> {
@@ -179,6 +182,26 @@ public class CustomVaccinationListViewAdapter extends ArrayAdapter<Vaccination> 
                                     db.collection("Batches").document(selectedVaccinationClass.getBatchNo())
                                             .update("quantityPending", FieldValue.increment(-1));
 
+                                    db.collection("Users")
+                                            .whereEqualTo("username", selectedVaccinationClass.getUsername())
+                                            .get()
+                                            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                    if (task.isSuccessful()) {
+                                                        for (QueryDocumentSnapshot document : task.getResult()) {
+                                                            User userClass = document.toObject(User.class);
+
+                                                            List<String> toEmailList = new ArrayList<String>();
+                                                            toEmailList.add(userClass.getEmail());
+
+                                                            new SendMailTask((Activity)parent.getContext()).execute("management.myVax2021@gmail.com",
+                                                                    "myvax12345", toEmailList, "Vaccination Appointment Confirmed!", "This email is to notify that your vaccination appointment has been confirmed." +
+                                                                            "\nLog in to My Vax app to check the full details.");
+                                                        }
+                                                    }
+                                                }
+                                            });
                                     //Snackbar to show successfully confirmed
                                     Snackbar snackbar = Snackbar.make(parent.findViewById(R.id.listView_batchDetails_vaccinationAppointmentList),
                                             "Appointment Confirmed", Snackbar.LENGTH_LONG);
