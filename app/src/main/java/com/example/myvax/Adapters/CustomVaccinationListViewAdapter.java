@@ -202,6 +202,7 @@ public class CustomVaccinationListViewAdapter extends ArrayAdapter<Vaccination> 
                                                     }
                                                 }
                                             });
+
                                     //Snackbar to show successfully confirmed
                                     Snackbar snackbar = Snackbar.make(parent.findViewById(R.id.listView_batchDetails_vaccinationAppointmentList),
                                             "Appointment Confirmed", Snackbar.LENGTH_LONG);
@@ -228,6 +229,27 @@ public class CustomVaccinationListViewAdapter extends ArrayAdapter<Vaccination> 
                                     db.collection("Batches").document(selectedVaccinationClass.getBatchNo())
                                             .update("quantityPending", FieldValue.increment(-1),
                                                     "quantityAvailable", FieldValue.increment(1));
+
+                                    db.collection("Users")
+                                            .whereEqualTo("username", selectedVaccinationClass.getUsername())
+                                            .get()
+                                            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                    if (task.isSuccessful()) {
+                                                        for (QueryDocumentSnapshot document : task.getResult()) {
+                                                            User userClass = document.toObject(User.class);
+
+                                                            List<String> toEmailList = new ArrayList<String>();
+                                                            toEmailList.add(userClass.getEmail());
+
+                                                            new SendMailTask((Activity)parent.getContext()).execute("management.myVax2021@gmail.com",
+                                                                    "myvax12345", toEmailList, "Vaccination Appointment Confirmed!", "This email is to notify that your vaccination appointment has been rejected." +
+                                                                            "\nLog in to My Vax app to check the full details.");
+                                                        }
+                                                    }
+                                                }
+                                            });
 
                                     //Snackbar to show successfully rejected
                                     Snackbar snackbar = Snackbar.make(parent.findViewById(R.id.listView_batchDetails_vaccinationAppointmentList),
